@@ -1133,7 +1133,7 @@ def create_folder(folder_name):
 
 def upload_file(file_path, folder_id):
     # 파일 업로드
-    file_metadata = {'name': 'example.txt', 'parents': [folder_id]}
+    file_metadata = {'name': parent_folder_name, 'parents': [folder_id]}
     media = MediaFileUpload(file_path, mimetype='text/plain')
     file = drive_service.files().create(body=file_metadata,
                                         media_body=media,
@@ -1144,4 +1144,4 @@ def upload_file(file_path, folder_id):
 folder_id = create_folder('pcot_result')
 
 # 파일 업로드
-upload_file('example.txt', folder_id)
+upload_file(parent_folder_name, folder_id)
