@@ -8,6 +8,12 @@ from oauth2client.service_account import ServiceAccountCredentials
 import shutil
 import re
 
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+import io
+from googleapiclient.http import MediaIoBaseUpload
+from googleapiclient.http import MediaFileUpload
+
 # 스프레드시트 접근을 위한 서비스 계정 키 파일 경로
 SERVICE_ACCOUNT_FILE = 'your path'
 
@@ -1107,3 +1113,35 @@ shutil.move(file_name, os.path.join(parent_folder_name, file_name))
 shutil.make_archive(parent_folder_name, 'zip', parent_folder_path)
 
 
+
+credentials = service_account.Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE, scopes=scope)
+
+# 드라이브 서비스 생성
+drive_service = build('drive', 'v3', credentials=credentials)
+
+def create_folder(folder_name):
+    # 새 폴더 생성 요청
+    file_metadata = {
+        'name': folder_name,
+        'mimeType': 'application/vnd.google-apps.folder'
+    }
+    folder = drive_service.files().create(body=file_metadata,
+                                          fields='id').execute()
+    print('폴더가 생성되었습니다. 폴더 ID: %s' % folder.get('id'))
+    return folder.get('id')
+
+def upload_file(file_path, folder_id):
+    # 파일 업로드
+    file_metadata = {'name': 'example.txt', 'parents': [folder_id]}
+    media = MediaFileUpload(file_path, mimetype='text/plain')
+    file = drive_service.files().create(body=file_metadata,
+                                        media_body=media,
+                                        fields='id').execute()
+    print('파일이 업로드되었습니다. 파일 ID: %s' % file.get('id'))
+
+# 폴더 생성
+folder_id = create_folder('pcot_result')
+
+# 파일 업로드
+upload_file('example.txt', folder_id)
