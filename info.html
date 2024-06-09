@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PCoT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/pcot_small.png" alt="Global">
+    <p>PCoT</p>
+  </a>
+  <p class="device-notification--message">PCoT provides hyper-personalized coding education with cheaper cost. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/pcot_small.png" alt="Global">
+            <p>PCoT</p>
+          </a>
+          <button class="cta" onclick="location.href='index.html'"style ="color: white; background-color:blue; font-weight: bold; font-size:20px; text-decoration: none; border: none;">Back to Home</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Basic Info</span></li>
+            <li ><span>Interests</span></li>
+            <li><span>Wants</span></li>
+            <li><span>For Yours</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="hire">
+              <h2>[Basic Info]</h2>
+              <br>
+              <br>
+              <!-- checkout formspree.io for easy form setup -->
+              <form class="work-request">
+                <div class="work-request--information">
+                  <div class="information-maj">
+                    <h3>Major 전공</h3>
+                    <input id="major" type="text" spellcheck="false" style="color:white; width: 90%;" placeholder="현재/이전 전공">
+                  </div>
+                  <div class="information-interest">
+                    <h3>Interest 관심 분야</h3>
+                    <input id="interest" type="text" spellcheck="false" style="color:white;  width: 90%;" placeholder="AI 외의 관심사">
+                  </div>
+                </div>
+                <div class="work-request--information">
+                  <div class="information-pr">
+                    <h3>희망 프로젝트</h3>
+                    <input id="project" type="text" spellcheck="false" style="color:white;  width: 90%;" placeholder="포트폴리오/팀프로젝트 등">
+                  </div>
+                  <div class="information-period">
+                    <h3>Project period 기간</h3>
+                    <input id="project_period" type="text" spellcheck="false" style="color:white;  width: 90%;" placeholder="ex. 3달">
+                  </div>
+                </div>
+                <h3><center>스크롤하여 이어서 작성하기</center></h3>
+              </form>
+                <!--<input type="submit" value="Search 4 yours"> 여기 제출하면 서비스가 바로 진행되도록-->
+            </div>
+        </li>
+        <li class="l-section section">
+            <div class="hire">
+              <h2>[Interests]</h2>
+              <!-- checkout formspree.io for easy form setup -->
+              <form class="work-request">
+                <div class="work-request--options">
+                    <span class="options-b">
+                    <input id="opt-1" type="checkbox" value="nlp">
+                    <label for="opt-1" style="width: 80%"> NLP (자연어처리) </label>
+                    </span>
+                    <span class="options-b">
+                    <input id="opt-2" type="checkbox" value="cv">
+                    <label for="opt-2" style="width: 80%"> CV (컴퓨터 비전) </label>
+                    </span>
+                    <span class="options-b">
+                    <input id="opt-3" type="checkbox" value="ML,DL">
+                    <label for="opt-3" style="width: 80%">Machine/Deep Learning</label>
+                    </span>
+                    <!--
+                    <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="frontend">
+                    <label for="opt-4">Frontend</label>
+                
+                    <input id="opt-5" type="checkbox" value="backend">
+                    <label for="opt-5">Backend</label>
+                
+                    <input id="opt-6" type="checkbox" value="data science">
+                    <label for="opt-6">Data Science</label>
+                    </span>
+                    <span class="options-c">
+                    <input id="opt-7" type="checkbox" value="cloud service">
+                    <label for="opt-7">Cloud Service</label>
+                
+                    <input id="opt-8" type="checkbox" value="app programming">
+                    <label for="opt-8">App Programming</label>
+                    </span>-->
+                </div>
+                <center>
+                <div class="work-request--information">
+                  
+                    <div class="information-level">
+                      <h3>Level 수준</h3>
+                      <input id="level" type="text" spellcheck="false" style="color:white; width: 270px" placeholder="Beginner/Intermediate/Advanced">
+                    </div>
+                  
+                </div>
+                </center>
+                <h3><center>스크롤하여 이어서 작성하기</center></h3>
+                </form>
+            </div>
+            </li>
+
+            <li class="l-section section">
+                <div class="hire">
+                  <br>
+                  <h2>[Wants]</h2>
+                  <!-- checkout formspree.io for easy form setup -->
+                  <form class="work-request">
+                    <div class="work-request--information">
+                        <div class="information-pj">
+                          <h3>Previous Job 이전 직무/현재 전공</h3>
+                          <input id="previous_job" type="text" spellcheck="false" style="color:white; width: 90%;" placeholder="이전 직무 or 현재 전공">
+                        </div>
+                        <div class="information-pj">
+                            <h3>Previous project 전 프로젝트</h3>
+                            <input id="previous_project" type="text" spellcheck="false" style="color:white;  width: 90%;" placeholder="AI프로젝트 ex. NER 연구 등">
+                        </div>
+                    </div>
+                    <div class="work-request--information">
+                        <div class="information-cor">
+                          <h3>Hope Corporation 희망 기업</h3>
+                          <input id="hope_corporation" type="text" spellcheck="false" style="color:white; width: 90%;" placeholder="작성란">
+                        </div>
+                        <div class="information-jo">
+                          <h3>Job Objective 희망 직무</h3>
+                          <input id="job_objective" type="text" spellcheck="false" style="color:white; width: 90%;" placeholder="ex. CV Researcher">
+                        </div>
+                    </div>
+                    <center>
+                    <div class="work-request--information">
+                      <div class="information-mail">
+                        <h3>Email 이메일</h3>
+                        <input id="email" type="text" spellcheck="false" style="color:white; width: 270px;" placeholder="작성란">
+                      </div>
+                    </div>
+                    </center>
+                    <div class="button-container">
+                      <!--<button onclick="alert('아래에 이메일을 남겨주시면, 프로젝트 주제 및 관련 자료/실습 코드를 적어주신 이메일로 12시간 내에 드리겠습니다! 감사합니다 :)')" style="font-weight: bold; font-size: 20px; color: white; background-color: blue;" id="user">Submit and Get yours!</button>-->
+                      </div>
+                      <br>
+                      <!--<div>
+                        <div class = "bt"><a href="main.html" style="font-weight: bold;">예시 PAGE 확인</a></div>
+                    </div>-->
+                  </form>
+                  <center>
+                  <button class= "cta" onclick="location.href='result.html'" style="font-weight: bold; font-size: 20px; color: white; background-color: blue; width: 350px;" id = "user">Submit and Get yours!</button>
+                    <div id="output"></div> 
+                  </center>
+                </div>
+            </li>
+            <li class="l-section section">
+              <div class="hire">
+                <br>
+                <br>
+                <br>
+                <h2>[For Yours]</h2>
+                <div>
+                  <center>
+                    <p>이메일을 남겨주시면 프로젝트 주제와 자료가 완성되었을 때 보내드리겠습니다.</p>
+                    <input id="submit-email" type="email" placeholder="알림을 받으실 이메일" /> <br><br> 
+                    <p>본 서비스가 정식으로 런칭된다면 사용하실 의향을 1 ~ 5점으로 평가해주세요.</p>
+                    <input id="submit-score" type="Text1" placeholder="사용 의향 점수" /> <br><br>
+                    <p>서비스가 이렇게 되었으면 좋겠다는 조언을 해 주세요!</p>
+                    <textarea id="submit-advice" name="Text1" cols="40" rows="5" placeholder="서비스에 대한 조언을 남겨주세요"></textarea><br><br>
+                    <button style="width:350px;" onclick="alert('좋은 의견 주셔서 감사합니다!')" id="submit">지금 제출!</button>
+                  </center>
+                </div>
+              </div>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Basic Info</li>
+    <li class="is-active">Interests</li>
+    <li class="is-active">Wants</li>
+    <li class="is-active">For Yours</li>
+
+  </ul>
+
+<script>
+  document.getElementById('output').style.display = 'none';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+
+<script>
+$("#user").on("click", function () {
+
+  console.log("start")      // 체크박스 값 수집
+  const field = [];
+
+  document.querySelectorAll(".work-request--options input[type='checkbox']").forEach((checkbox) => {
+      if (checkbox.checked) {
+          field.push(checkbox.value);
+      }
+  });
+
+  // 텍스트 필드 값 수집 
+  const major = document.getElementById("major").value;
+  const interest = document.getElementById("interest").value;
+  const project = document.getElementById("project").value;
+  const project_period = document.getElementById("project_period").value;
+
+  const level = document.getElementById("level").value;
+  
+  const prev_project = document.getElementById("previous_project").value;
+  const prev_job = document.getElementById("previous_job").value;
+  const hope_com = document.getElementById("hope_corporation").value;
+  const want_job = document.getElementById("job_objective").value;
+  const email = document.getElementById("email").value;
+
+  // 수집된 데이터 객체로 저장
+  const userData = {
+      field: field,
+
+      major: major,
+      interest: interest,
+      project: project,
+      project_period: project_period,
+
+      level: level,
+
+      previousProject: prev_project,
+      previousJob: prev_job,
+      hopeCorporation: hope_com,
+      jobObjective: want_job,
+      email: email,
+  };
+
+  const outputDiv = document.getElementById('output');
+  outputDiv.textContent = JSON.stringify(userData, null, 2); // Pretty print JSON with 2 space indentation
+  var userdata = JSON.stringify(userData, null, 2);
+
+  console.log('Userdata Collected:', userdata);
+
+  var user_val = JSON.stringify({
+    "id": getUVfromCookie(),
+    "landingUrl": window.location.href, 
+    "ip": ip,
+    "time_stamp":getTimeStamp(),
+    "device": mobile,
+    "referer": "https://everytime.kr/",
+    "userData": userdata,
+  })
+      
+  axios.get('https://script.google.com/macros/s/AKfycbzCtlvlDwiLoQS6nKkFMAJJKa6hqiVOUZImmQroWQVjqiYpetRtaSUiTE9A1uFHqdr76A/exec?action=insert&table=log&data=' + user_val)
+  .then(response => {
+  console.log(response.data.data);
+  })
+
+  });
+
+$("#submit").on("click", function () {
+  const email = $("#submit-email").val();
+  const advice = $("#submit-advice").val();
+  const score = $("#submit-score").val();
+
+  function validateEmail(email) {
+      var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+      return re.test(email);
+  }
+
+  if (email == '' || !validateEmail(email)) {
+      alert("이메일이 유효하지 않아 알림을 드릴 수가 없습니다. ");
+      return;
+  }
+
+  var finalData = JSON.stringify({
+      "id": getUVfromCookie(),
+      "landingUrl": window.location.href, 
+      "ip": ip,
+      "time_stamp":getTimeStamp(),
+      "device": mobile,
+      "referer": "https://everytime.kr/", //document.referrer,
+      "score": score,
+      "email": email,
+      "advice": advice,
+  })
+
+  axios.get('https://script.google.com/macros/s/AKfycbzCtlvlDwiLoQS6nKkFMAJJKa6hqiVOUZImmQroWQVjqiYpetRtaSUiTE9A1uFHqdr76A/exec?action=insert&table=feedback&data=' + finalData)
+      .then(response => {
+    console.log(response.data.data);
+    $('#submit-email').val('');
+    $('#submit-advice').val('');
+    $('#submit-score').val('');
+      })
+    });
+</script>
+
+
+<script type="application/javascript">
+  var ip = "null";
+  function getIP(json) {
+      console.log(json);
+      try {
+    ip = json.ip;
+      } catch (e) {
+    ip = 'unknown';
+      }
+      return;
+  }
+</script>
+<script type="application/javascript" src="https://jsonip.com?format=jsonp&callback=getIP"></script>
+
+<script>
+var queryString = location.search;
+const urlParams = new URLSearchParams(queryString);
+var utm = urlParams.get("utm");
+
+var mobile = 'desktop';
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // true for mobile device
+  mobile = 'mobile';
+}
+
+// Sam pading value to start with 0. eg: 01, 02, .. 09, 10, ..
+function padValue(value) {
+					return (value < 10) ? "0" + value : value;
+				}
+
+
+function getTimeStamp() {
+  const date = new Date();
+
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const formattedDate = `${padValue(year)}-${padValue(month)}-${padValue(day)} ${padValue(hours)}:${padValue(minutes)}:${padValue(seconds)}`;
+
+  return formattedDate;
+}
+
+// 쿠키에서 값을 가져오는 함수
+function getCookieValue(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+}
+
+// 쿠키에 값을 저장하는 함수
+function setCookieValue(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getUVfromCookie() {
+  // 6자리 임의의 문자열 생성
+  const hash = Math.random().toString(36).substring(2, 8).toUpperCase();
+  // 쿠키에서 기존 해시 값을 가져옴
+  const existingHash = getCookieValue("user");
+  // 기존 해시 값이 없으면, 새로운 해시 값을 쿠키에 저장
+  if (!existingHash) {
+    setCookieValue("user", hash, 180); // 쿠키 만료일은 6개월 
+    return hash;
+  } else {
+    // 기존 해시 값이 있으면, 기존 값을 반환
+    return existingHash;
+  }
+}
+
+/* data를 만들 땐 모든 field가 들어 있어야 함 */
+var data = JSON.stringify(
+                {"id": getUVfromCookie(),
+                "landingUrl": window.location.href, 
+                "ip": ip,
+                "referer": document.referrer,
+                "time_stamp":getTimeStamp(), 
+                "utm": utm,
+                "device": mobile,
+                "advice": advice,
+                "userData": userData
+              }
+  );
+
+$(document).ready(function () {
+
+					/*$.ajax({
+					    url: 'https://script.google.com/macros/s/AKfycbw1YVnvFRSvJoaEIKuctYQqSYWeFsw3vHYi4V6X8beXTBrVM3Bk11ubIDzxqK-gwdcMXw/exec?action=insert&table=table&data='+ data,
+					    dataType: 'jsonp',
+					    success: function (data) {
+						console.log('성공 - ', JSON.stringify(data));
+					    },
+					    error: function (xhr) {
+						console.log('실패 - ', JSON.stringify(xhr));
+					    }
+					});*/
+          /* axios.get('https://script.google.com/macros/s/AKfycbw1YVnvFRSvJoaEIKuctYQqSYWeFsw3vHYi4V6X8beXTBrVM3Bk11ubIDzxqK-gwdcMXw/exec?action=insert&table=table&data='+data)
+				    .then(response => {
+					console.log(JSON.stringify(response));
+				    }) */
+				});
+			
+</script>
+
+</body>
+</html>
+
+
+<style>
+  input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+  }
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+  .bt {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+      background-color: white;
+  }
+  .bt>a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .button-container>cta{
+    color: #e3e0e0;
+  }
+  .cta{
+    color: #e3e0e0;
+  }
+
+  .whiteText {
+    color: white;
+  }
+
+  .sub{
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .sub2{
+    color:blue;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .sub3{
+    color:white;
+    font-style: italic;
+    background-color: rgb(39, 38, 38);
+    font-weight: bold;
+    font-size: 25px;
+    width: 415px;
+    padding: 8px;
+  }
+</style>

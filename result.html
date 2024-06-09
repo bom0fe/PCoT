@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PCoT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .spinner-container {
+      position: relative;
+      height: 100vh; /* Ensures the spinner is vertically centered */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spinner {
+      border: 20px solid #f3f3f3; /* Light grey */
+      border-top: 20px solid blue;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      animation: spin 2s linear infinite; /* Reduced time to ensure spinner rotation */
+      z-index: 1000;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .loading-message {
+      text-align: center;
+      font-size: 35px;
+      color: white;
+      margin-top: 20px; /* Adds some space between the spinner and the message */
+    }
+  </style>
+</head>
+<body>
+<!-- Spinner container -->
+<div class="spinner-container">
+  <!-- Spinner -->
+  <div id="spinner" class="spinner"></div>
+  <!-- Loading message -->
+  <div class="loading-message" id="loading-message">Generating your roadmap and practice codes...</div>
+</div>
+
+<!-- Main content (initially hidden) -->
+<div id="main-content" class="hidden">
+
+  <!-- notification for small viewports and landscape oriented smartphones -->
+  <div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+      <img src="assets/img/pcot_small.png" alt="Global">
+      <p>PCoT</p>
+    </a>
+    <p class="device-notification--message">PCoT provides hyper-personalized coding education with cheaper cost. You won't be disappointed.</p>
+  </div>
+
+  <div class="perspective effect-rotate-left">
+    <div class="container">
+      <div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="#0">
+              <img src="assets/img/pcot_small.png" alt="Global">
+              <p>PCoT</p>
+            </a>
+            <button class="cta" onclick="location.href='index.html'" style="color: white; background-color: blue; font-weight: bold; font-size: 20px; text-decoration: none; border: none;">Back to Home</button>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+          </header>
+          <nav class="l-side-nav">
+            <ul class="side-nav">
+              <li class="is-active"><span>Your WorkSpace</span></li>
+            </ul>
+          </nav>
+          <ul class="l-main-content main-content">
+            <li class="l-section section section--is-active">
+              <div class="intro">
+                <div class="intro--banner">
+                  <h2>Your own project Roadmap and Codes</h2>
+                  <h1 id="project-title">: Sentiment analysis of user feedback for improving interaction in AI chatbot</h1>
+                </div>
+                <div class="intro--options">
+                  <a href="#0">
+                    <h3 id="month1-title">Month 1. NLP 개념 학습 및 데이터 전처리 실습</h3>
+                    <button onclick="location.href='week1.html'" style="color: white; background-color: blue; font-weight: bold; font-size: 15px; text-decoration: none; border: none;">주차별 로드맵과 코드 보러가기</button>
+                  </a>
+                  <a href="#0">
+                    <h3 id="month2-title">Month 2. Sentiment Analysis 실습 및 모델 구현</h3>
+                    <button onclick="location.href='week2.html'" style="color: white; background-color: blue; font-weight: bold; font-size: 15px; text-decoration: none; border: none;">주차별 로드맵과 코드 보러가기</button>
+                  </a>
+                  <a href="#0">
+                    <h3 id="month3-title">Month 3. AI Chatbot 구현 및 사용자 피드백/개선</h3>
+                    <button onclick="location.href='week3.html'" style="color: white; background-color: blue; font-weight: bold; font-size: 15px; text-decoration: none; border: none;">주차별 로드맵과 코드 보러가기</button>
+                  </a>
+                </div>
+                <!--<h3 id="response"></h3>-->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="outer-nav">
+      <li class="is-active">Your Space</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  async function getResponse() {
+    const spinner = document.getElementById('spinner');
+    const mainContent = document.getElementById('main-content');
+    const loadingMessage = document.getElementById('loading-message');
+    
+    spinner.style.display = 'block'; // 스피너 표시
+    mainContent.style.opacity = '0.5'; // 메인 콘텐츠 흐리게
+    
+    let messageIndex = 0; // 변수를 추가해서 메시지 인덱스를 추적합니다.
+    const messages = ["당신을 위한 로드맵과 실습코드를 생성 중입니다!", "당신을 위한 실습코드를 생성중입니다!"];
+    
+    try {
+      const userData = localStorage.getItem('userData');
+      const response = await fetch('/api/get-curriculum', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: userData
+      });
+      const text = await response.text();
+      const data = JSON.parse(text);
+      document.getElementById('project-title').textContent = data.projectTitle;
+      document.getElementById('month1-title').textContent = data.monthTitle.monthly_plan.month1;
+      document.getElementById('month2-title').textContent = data.monthTitle.monthly_plan.month2;
+      document.getElementById('month3-title').textContent = data.monthTitle.monthly_plan.month3;
+    } catch (error) {
+      document.getElementById('response').textContent = 'An error occurred';
+    } finally {
+      // 최소 30초간 스피너를 보여줌
+      setTimeout(() => {
+        spinner.style.display = 'none'; // 스피너 숨기기
+        loadingMessage.style.display = 'none'; // Loading message 숨기기
+        mainContent.style.opacity = '1'; // 메인 콘텐츠 원래대로
+        mainContent.classList.remove('hidden');
+      }, 30000); // 30초 (30,000 밀리초)
+    }
+  }
+    // 페이지 로드 시 getResponse 함수 자동 실행
+    window.onload = getResponse;
+  </script>
+  
+</body>
+</html>

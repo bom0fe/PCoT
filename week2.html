@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PCoT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<style>
+    .intro h1 {
+    font-size: 30px;
+    border-width: 10px;
+    text-align: center;
+    border: 3px solid blue;
+    }
+    .intro h3 {
+    font-style: italic;
+    }
+  </style>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/pcot_small.png" alt="Global">
+    <p>PCoT</p>
+  </a>
+  <p class="device-notification--message">PCoT provides hyper-personalized coding education with cheaper cost. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/pcot_small.png" alt="Global">
+            <p>PCoT</p>
+          </a>
+          <button class="cta" onclick="location.href='index.html'"style ="color: white; background-color:blue; font-weight: bold; font-size:20px; text-decoration: none; border: none;">Back to Home</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+            <ul class="side-nav">
+              <li class="is-active"><span>Week 1</span></li>
+              <li><span>Week 2</span></li>
+              <li><span>Week 3</span></li>
+              <li><span>Week 4</span></li>
+            </ul>
+          </nav>
+          <ul class="l-main-content main-content">
+            <li class="l-section section section--is-active">
+            <div class="intro">
+                <h1>1주차 학습 내용</h1>
+                  <h2>
+                    감정 분석의 이론적 개념.<br>
+                    감정 분석의 응용, 알고리즘 접근법 (사전 기반 및 머신러닝 기반 방법), 도전 과제.
+                  </h2>
+                  <h2>실습 코드 주제: 사전 학습 모델을 이용한 기본 감정 분석 구현</h2>
+
+                  <h2>실습 자료:</h2>
+                  <h3>
+                    - [Basic Sentiment Analysis Source Repositories](https://github.com/search?q=sentiment+analysis+basic&type=commits)<br>
+                    - [Article on Sentiment Analysis for Beginners](https://towardsdatascience.com/sentiment-analysis-for-beginners-1e28e7c6e5e)<br>
+                    - [Coursera: Natural Language Processing Specialization](https://www.coursera.org/learn/language-processing)
+                  </h3>
+                  <center>
+                  <button id="link1" style="color: white; background-color:blue; font-weight: bold; width: 50%; font-size:20px; text-decoration: none; border: none;">실습코드 다운로드</button>
+                  </center>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="intro">
+                <h1>2주차 학습 내용</h1>
+                  <h2>
+                    감정 분석을 위한 텍스트 데이터 준비.<br>
+                    클래스 불균형 처리, 특징 벡터 구성 등.
+                  </h2>
+                  <h2>실습 코드 주제: 감정 분석 작업을 위한 텍스트 데이터 준비</h2>
+                  <h2>실습 자료:</h2>
+                  <h3>
+                    - [Text Data Preparation Source Repositories](https://github.com/search?q=text+data+preparation+sentiment+analysis&type=commits)<br>
+                    - [Article on Building Sentiment Analysis](https://towardsdatascience.com/a-step-by-step-approach-to-build-your-sentiment-analysis-831ff710fb6e)<br>
+                    - [Udacity: Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120)
+                  </h3>
+                  <center>
+                  <button id="link2" style="color: white; background-color:blue; font-weight: bold; width: 50%; font-size:20px; text-decoration: none; border: none;">실습코드 다운로드</button>
+                  </center>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="intro">
+                <h1>3주차 학습 내용</h1>
+                <h2>
+                    감정 분석 모델 구현.<br>
+                    나이브 베이즈, SVM, LSTM 등의 모델 학습 및 구현.
+                  </h2>
+                  <h2>실습 코드 주제: 샘플 데이터셋을 이용하여 감정 분석 모델 구축 및 평가</h2>
+                  <h2>실습 자료:</h2>
+                  <h3>
+                    - [Sentiment Analysis Model Source Repositories](https://github.com/search?q=sentiment+analysis+model&type=commits)<br>
+                    - [TensorFlow: Text Classification Tutorial](https://www.tensorflow.org/tutorials/keras/text_classification_with_hub)<br>
+                    - [Scikit-Learn Supervised Learning Documentation](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning)
+                  </h3>
+                  <center>
+                  <button id="link3" style="color: white; background-color:blue; font-weight: bold; width: 50%; font-size:20px; text-decoration: none; border: none;">실습코드 다운로드</button>
+                  </center>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="intro">
+                <h1>4주차 학습 내용</h1>
+                  <h2>
+                    모델 평가 및 성능 최적화.<br>
+                    감정 분석 모델을 평가하는 방법 (정밀도, 재현율, F1-점수, ROC 곡선 등).<br>
+                    하이퍼파라미터 튜닝 및 모델 성능 최적화 기법 탐구.
+                  </h2>
+                  <h2>실습 코드 주제: 감정 분석 모델 평가 및 최적화</h2>
+                  <h2>실습 자료:</h2>
+                  <h3>
+                    - [Model Evaluation Source Repositories](https://github.com/search?q=sentiment+analysis+model+evaluation&type=commits)<br>
+                    - [Scikit-Learn Model Evaluation Documentation](https://scikit-learn.org/stable/modules/model_evaluation.html)<br>
+                    - [Udemy: Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp)
+                  </h3>
+                  <center>
+                  <button id="link4" style="color: white; background-color:blue; font-weight: bold; width: 50%; font-size:20px; text-decoration: none; border: none;">실습코드 다운로드</button>
+                  </center>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Week 1</li>
+    <li>Week 2</li>
+    <li>Week 3</li>
+    <li>Week 4</li>
+  </ul>
+      
+  <!-- <center>
+    <iframe type="text/html" width="315" height="560" src="https://www.youtube.com/embed/QHgyX24kOSE?autoplay=1" title="대한민국 대학생들이 만든 레전드 광고 ㅋㅋㅋ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </center> -->
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="application/javascript" src="https://jsonip.com?format=jsonp&callback=getIP"></script>
+
+<script>
+    document.getElementById('link1').addEventListener('click', function() {
+      // 지정한 URL로 이동합니다.
+      window.location.href = 'https://drive.google.com/drive/u/2/folders/1FrmgfiAuUks_QJIWAm1SbHaY6We22pD8';
+    });
+  </script>
+  <script>
+    document.getElementById('link2').addEventListener('click', function() {
+      // 지정한 URL로 이동합니다.
+      window.location.href = 'https://drive.google.com/drive/u/2/folders/1FrmgfiAuUks_QJIWAm1SbHaY6We22pD8';
+    });
+  </script>
+  <script>
+    document.getElementById('link3').addEventListener('click', function() {
+      // 지정한 URL로 이동합니다.
+      window.location.href = 'https://drive.google.com/drive/u/2/folders/1FrmgfiAuUks_QJIWAm1SbHaY6We22pD8';
+    });
+  </script>
+  <script>
+    document.getElementById('link4').addEventListener('click', function() {
+      // 지정한 URL로 이동합니다.
+      window.location.href = 'https://drive.google.com/drive/u/2/folders/1FrmgfiAuUks_QJIWAm1SbHaY6We22pD8';
+    });
+  </script>
+
+<script>
+
+var queryString = location.search;
+const urlParams = new URLSearchParams(queryString);
+const utm = urlParams.get("utm");
+
+var mobile = 'desktop';
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // true for mobile device
+  mobile = 'mobile';
+}
+
+// Sam pading value to start with 0. eg: 01, 02, .. 09, 10, ..
+function padValue(value) {
+					return (value < 10) ? "0" + value : value;
+				}
+
+function getTimeStamp() {
+  const date = new Date();
+
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const formattedDate = `${padValue(year)}-${padValue(month)}-${padValue(day)} ${padValue(hours)}:${padValue(minutes)}:${padValue(seconds)}`;
+
+  return formattedDate;
+}
+
+// 쿠키에서 값을 가져오는 함수
+function getCookieValue(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+}
+
+// 쿠키에 값을 저장하는 함수
+function setCookieValue(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getUVfromCookie() {
+  // 6자리 임의의 문자열 생성
+  const hash = Math.random().toString(36).substring(2, 8).toUpperCase();
+  // 쿠키에서 기존 해시 값을 가져옴
+  const existingHash = getCookieValue("user");
+  // 기존 해시 값이 없으면, 새로운 해시 값을 쿠키에 저장
+  if (!existingHash) {
+    setCookieValue("user", hash, 180); // 쿠키 만료일은 6개월 
+    return hash;
+  } else {
+    // 기존 해시 값이 있으면, 기존 값을 반환
+    return existingHash;
+  }
+}
+
+/* 수정 data -> id:getUVfromCookie() */
+
+
+/* data를 만들 땐 모든 field가 들어 있어야 함 */
+var data = JSON.stringify(
+                {"id": getUVfromCookie(),
+                "landingUrl": window.location.href, 
+                "ip": ip,
+                "referer": "https://instagram.com/yonsei",
+                "time_stamp":getTimeStamp(), 
+                "utm": "sinchon",
+                "device": mobile}
+  );
+
+$(document).ready(function () {
+
+					/*$.ajax({
+					    url: 'https://script.google.com/macros/s/AKfycbw1YVnvFRSvJoaEIKuctYQqSYWeFsw3vHYi4V6X8beXTBrVM3Bk11ubIDzxqK-gwdcMXw/exec?action=insert&table=table&data='+ data,
+					    dataType: 'jsonp',
+					    success: function (data) {
+						console.log('성공 - ', JSON.stringify(data));
+					    },
+					    error: function (xhr) {
+						console.log('실패 - ', JSON.stringify(xhr));
+					    }
+					});*/
+          axios.get('https://script.google.com/macros/s/AKfycbw1YVnvFRSvJoaEIKuctYQqSYWeFsw3vHYi4V6X8beXTBrVM3Bk11ubIDzxqK-gwdcMXw/exec?action=insert&table=table&data='+data)
+				    .then(response => {
+					console.log(JSON.stringify(response));
+				    })
+				});
+			
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+
+</body>
+</html>
+
+<style>
+  input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+  }
+  button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #333;
+  }
+  
+</style>
+
+<style>
+  .spinner {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 20px solid #f3f3f3; /* Light grey */
+    border-top: 20px solid blue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 4s linear infinite;
+    z-index: 1000;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
